@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/controller")
@@ -29,15 +30,12 @@ public class MainController {
     }
 
     @GetMapping("/{id}")
-    public Produtos obterProduto(@PathVariable Long id) {
-        return produtos.stream()
-                .filter(produto -> produto.getId().equals(id))
-                .findFirst()
-                .orElse(null);
+    public Optional<Produtos> obterProduto(@PathVariable Long id) {
+        return repository.findById(id);
     }
 
     @DeleteMapping("/{id}")
     public void deletarProduto(@PathVariable Long id) {
-        produtos.removeIf(produto -> produto.getId().equals(id));
+        repository.deleteById(id);
     }
 }
