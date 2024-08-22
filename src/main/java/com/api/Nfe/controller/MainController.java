@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * <h1>Nfe Api</h1>
+ * <h2>Nfe Api</h2>
  * <b>Note:</b> Ler atentamente essa documentação
  * @author Lucas
  * @version 1.0

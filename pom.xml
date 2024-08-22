@@ -79,6 +79,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.8.0</version> <!-- Certifique-se de que a versão é a mais recente -->
+				<configuration>
+					<source>1.8</source> <!-- Defina a versão do Java que está usando -->
+					<encoding>UTF-8</encoding>
+					<charset>UTF-8</charset>
+					<docencoding>UTF-8</docencoding>
+					<quiet>false</quiet> <!-- Exibe mensagens durante a geração -->
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
