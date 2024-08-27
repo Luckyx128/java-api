@@ -32,6 +32,6 @@ public class Produtos {
                 this.dataInclusao = LocalDateTime.now();
         }
 
-        @Column(name = "quantidae",nullable = false)
-        private  int quantaidade;
+        @Column(name = "quantidade",nullable = false)
+        private  int quantidade;
 }
