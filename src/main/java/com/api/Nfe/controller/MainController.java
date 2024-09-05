@@ -10,13 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * <h2>Nfe Api</h2>
- * <b>Note:</b> Ler atentamente essa documentação
- * @author Lucas
- * @version 1.0
- * @since 22/08/2024
- * **/
+
 @RestController
 @RequestMapping("/api/controller")
 public class MainController {

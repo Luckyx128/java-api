@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Classe principal para iniciar a aplicação Spring boot
- *  @author Lucas De Amorim
+ *  @author Lucas De Amorimc
  *  @version 1.0
  *  @since 22/08/2024
  * **/
