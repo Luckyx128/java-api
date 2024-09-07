@@ -23,6 +23,7 @@ public class MainController {
      * <b>Method</b>: GET<br>
      * <b>return</b> List com todos os Produtos
      */
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping
     public List<Produtos> listarProdutos() {
         return repository.findAll();

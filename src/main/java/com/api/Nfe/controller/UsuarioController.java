@@ -42,12 +42,17 @@ public class UsuarioController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+    @CrossOrigin(origins = "http://localhost:3000")
     @PostMapping("/autenticar")
-    public void autenticar_usuario(@RequestBody @NotNull Usuarios usuarios){
+    public boolean autenticar_usuario(@RequestBody @NotNull Usuarios usuarios){
         String nome = usuarios.getNome();
         String senha = usuarios.getSenha();
         System.out.println(nome);
-        Optional<Usuarios> user = userRepository.findByNome(nome);
-        System.out.println(user);
+        Optional<Usuarios> user = userRepository.findByNomeAndSenha(nome,senha);
+        if (user.isPresent()){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
